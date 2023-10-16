@@ -34,6 +34,6 @@ export const myProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
-        }, 2000)
+        }, 1000)
     })
 }
