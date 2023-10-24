@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export const useAsync = (customHookFunction, dependencies = []) => {
+const useAsync = (customHookFunction, dependencies = []) => {
     //estado de datos
     const [data, setData] = useState()
    
@@ -32,3 +32,5 @@ export const useAsync = (customHookFunction, dependencies = []) => {
         error
     }
 }
+
+export default useAsync
