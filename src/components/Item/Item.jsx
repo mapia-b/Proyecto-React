@@ -1,3 +1,4 @@
+import classes from './Item.module.css'
 import { Link, useNavigate } from "react-router-dom"
 
 //desestructuro las propiedadaes del obj
@@ -12,13 +13,15 @@ const Item = ({ id, title, img, price, stock }) => {
     }
 
     return (
-        <div onClick={handleClick} style={{ marginBottom: 20}}>
-            <h2>{title}</h2>
-            <img src={img} style={{ width: 200}}/>
-            <h3 className="info">stock disponible: {stock}</h3>
+        <div onClick={handleClick} className={classes.padrecard} >
+            <section className={classes.card}>
+            <h2 className={classes.articulo}>{title}</h2>
+            <img src={img} style={{ width:150}}/>
+            <h3 className={classes.stock}>Productos en stock: <strong>{stock}</strong></h3>
             <h4 className="precio">{price}$UYU</h4>
-            <button onClick={() => navigate('/item')}>+ info</button>
+            <button onClick={() => navigate('/item')} className={classes.info}>+ info</button>
             {/* <Link to={`/item/${id}`}>Ver detalle</Link> */}
+            </section>
         </div>
     )
 }

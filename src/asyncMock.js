@@ -1,7 +1,7 @@
 const products = [
     {
         id: '1',
-        title: 'escurridor',
+        title: 'Escurridor',
         price: '1200',
         stock: '5',
         category: 'cocina',
@@ -10,34 +10,34 @@ const products = [
     },
     {
         id: '2',
-        title: 'alfombra bano',
+        title: 'Alfombra baño',
         price: '700',
         stock: '7',
-        category: 'bano',
+        category: 'baño',
         description: 'alfombra negra para fuera de la ducha',
         img: 'https://f.fcdn.app/imgs/380997/www.decohogar.com.uy/decouy/84f4/webp/catalogo/252123-01_1/460_600/alfombra-40x60cm-bucle-negro-alfombra-40x60cm-bucle-negro.jpg'
     },
     {
         id: '3',
-        title: 'porta papel higienico',
+        title: 'Porta ph',
         price: '600',
         stock: '3',
-        category: 'bano',
-        description: 'porta ph en colornegro',
+        category: 'baño',
+        description: 'porta papel higienico en color negro',
         img: 'https://f.fcdn.app/imgs/59e3ab/www.decohogar.com.uy/decouy/c370/webp/catalogo/ML7530_1/460_600/soporte-papel-higienico-12x13x64cm-cromado-negro-soporte-papel-higienico-12x13x64cm-cromado-negro.jpg'
     },
     {
         id: '4',
-        title: 'jarron marron',
+        title: 'Jarrón',
         price: '1000',
         stock: '2',
         category: 'ceramica',
-        description: 'pieza unica en cerámica',
+        description: 'pieza unica en cerámica, color marrón',
         img: 'https://f.fcdn.app/imgs/942b1e/www.leblanc.com.uy/lblauy/501b/webp/catalogo/261206001_1/1000_1000/jarron-marron-gres-82057437.jpg'
     },
     {
         id: '5',
-        title: 'cafetera italiana',
+        title: 'Cafetera italiana',
         price: '1000',
         stock: '2',
         category: 'cocina',
@@ -46,7 +46,7 @@ const products = [
     },
     {
         id: '6',
-        title: 'posa fuente',
+        title: 'Posa fuentes de silicona',
         price: '300',
         stock: '4',
         category: 'cocina',
@@ -55,25 +55,25 @@ const products = [
     },
     {
         id: '7',
-        title: 'maceta de ceramica',
+        title: 'Maceta de cerámica',
         price: '1500',
         stock: '1',
         category: 'ceramica',
         description: 'maceta de ceramica, diseno unico',
-        img: 'https://www.leblanc.com.uy/catalogo/maceta-blanco-gres-82057487_261202_001'
+        img: 'https://f.fcdn.app/imgs/8b2e36/www.leblanc.com.uy/lblauy/b8da/webp/catalogo/261202001_0/2000-2000/maceta-blanco-gres-82057487.jpg'
     },
     {
         id: '8',
-        title: 'florero de ceramica',
+        title: 'Florero de cerámica',
         price: '1900',
         stock: '1',
         category: 'sale',
         description: 'florero de ceramica, color blanco, ultima pieza',
-        img: 'https://www.decohogar.com.uy/catalogo/florero-ceramica-12x8-5x20cm-blanco_4651713_0'
+        img: 'https://f.fcdn.app/imgs/a02896/www.decohogar.com.uy/decouy/513b/webp/catalogo/4651713_1/460_600/florero-ceramica-12x8-5x20cm-blanco-florero-ceramica-12x8-5x20cm-blanco.jpg'
     },
     {
         id: '9',
-        title: 'florero de ceramica',
+        title: 'Florero de cerámica',
         price: '2300',
         stock: '3',
         category: 'ceramica',
@@ -82,7 +82,7 @@ const products = [
     },
     {
         id: '10',
-        title: 'aromatizador de ambiente',
+        title: 'Aromatizador de ambiente',
         price: '1000',
         stock: '3',
         category: 'sale',
@@ -91,7 +91,7 @@ const products = [
     },
     {
         id: '11',
-        title: 'manta rayas',
+        title: 'Manta rayas',
         price: '3000',
         stock: '3',
         category: 'living',
@@ -99,7 +99,7 @@ const products = [
         img:'https://static.zarahome.net/8/photos4/2023/I/4/1/p/2327/004/104/2327004104_2_7_1.jpg?t=1695302051436' 
     },
     {   id: '12',
-    title: 'apoya libros',
+    title: 'Apoya libros',
     price: '1200',
     stock: '6',
     category: 'living',
@@ -114,7 +114,7 @@ export const myProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
-        }, 500)
+        }, 200)
     })
 }
 
