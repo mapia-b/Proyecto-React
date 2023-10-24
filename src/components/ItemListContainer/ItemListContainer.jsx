@@ -2,23 +2,24 @@ import classes from './ItemListContainer.module.css'
 import ItemList from '../ItemList/ItemList'
 import useAsync from '../hooks/useAsync'
 
-import { myProducts, myProductsByCategory, myProductsById } from '../../asyncmock'
+import { myProducts, myProductsByCategory } from '../../asyncmock'
 import { useParams } from 'react-router-dom'
 
 
 const ItemListContainer =({greeting}) => {
     //useParams para obtener elemento categoryId de la URL
     const {categoryId} = useParams()
+    console.log({greeting})
     
     //customHookFunction definida en mi hook
-    //si se obtiene el valor de categoryId then se llama a la funcion myProductsByCategroy, sino se llama a la funcion myProducts
+    //si se obtiene el valor de categoryId entonces se llama a la funcion myProductsByCategroy, sino se llama a la funcion myProducts
     const customHookFunction = () => categoryId ? myProductsByCategory(categoryId) : myProducts()
     
     const { data: products, loading, error } = useAsync(customHookFunction, [categoryId])
 
     if(loading) {
         return <h2>Cargando la página</h2>
-        //poner imagen
+        
         
     }
 
