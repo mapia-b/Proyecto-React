@@ -8,6 +8,7 @@
     background-color: rgb(255, 255, 255);
    
 }
+/* NO SE PORQUE NO SE ME PONEN LOS PRODUCTOS EN FLEX DIRECTION ROW */
 
 .card{
     display: flex;

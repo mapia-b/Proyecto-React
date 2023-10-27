@@ -18,6 +18,7 @@ const ItemDetailContainer = () => {
         setLoading(false)
     })
 }, [itemId])
+//paso como dependencia itemId
 
 if(loading) {
     return <h2>Cargando la página</h2>

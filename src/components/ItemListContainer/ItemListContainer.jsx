@@ -19,22 +19,21 @@ const ItemListContainer =({greeting}) => {
 
     if(loading) {
         return <h2>Cargando la página</h2>
-        
-        
+               
     }
 
     if(error) {
         return <h2>Ocurrió un error al cargar los productos, intenta denuevo</h2>
     }
 
-    //si  no se muestra ningun producto
+    //si no se muestra ningun producto
     if(products.length === 0) {
         return <h2> Categoría sin stock</h2>
     }
 
     return(
         <>
-            <h3 className={classes.titulo}>{greeting}</h3>
+            <h3 className={classes.titulo}>{!categoryId ? greeting : (greeting + categoryId)}</h3>
             <ItemList products={products}/>
         </>
     )

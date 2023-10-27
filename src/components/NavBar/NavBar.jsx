@@ -1,12 +1,14 @@
 import classes from './NavBar.module.css'
 import CartWidget from '../CartWidget/CartWidget'
 import { NavLink, useNavigate } from 'react-router-dom'
+// import logo from './assets/logo.svg' NO PUDE IMPORTAR LA IMAGEN NO SE PORQUE
 
 const NavBar = () => {
     return (
         <>
             <nav>
-                <h1>Casa Franca</h1>
+                <NavLink to='/' className={classes.title}>Casa Franca</NavLink>
+                
                 <section>  
                     <NavLink to='/category/cocina' className={({isActive})=> isActive ? classes.active : classes.boton}>Cocina</NavLink>     
                     <NavLink to='/category/living' className={({isActive})=> isActive ? classes.active : classes.boton}>Living</NavLink>     

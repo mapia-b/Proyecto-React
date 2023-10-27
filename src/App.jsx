@@ -17,14 +17,12 @@ function App() {
         <NavBar />
             <Routes>
             <Route path='/' element={<ItemListContainer greeting={'Aquí vas a econtrar los mejores productos para el hogar'} />} />
-            <Route path='/category/:categoryId' element={<ItemListContainer greeting={category} />} />
-            {/* <Route path='/item/:itemId' element={<ItemDetailContainer />}/> */}
+            <Route path='/category/:categoryId' element={<ItemListContainer greeting={'Productos de '} />} />
+            <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
           </Routes>
         </BrowserRouter>
       </div>
-      <p className="read-the-docs">
-
-      </p>
+     
     </>
   )
 }
