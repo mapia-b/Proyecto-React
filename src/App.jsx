@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div>
-       
+       <img />
         <BrowserRouter>
         <NavBar />
             <Routes>

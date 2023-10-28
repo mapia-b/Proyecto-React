@@ -95,7 +95,7 @@ const products = [
         price: '3000',
         stock: '3',
         category: 'living',
-        description: 'Manta a rayas para sillon, producto original',
+        description: 'Manta a rayas para sillón, producto original',
         img:'https://static.zarahome.net/8/photos4/2023/I/4/1/p/2327/004/104/2327004104_2_7_1.jpg?t=1695302051436' 
     },
     {   id: '12',
@@ -103,7 +103,7 @@ const products = [
     price: '1200',
     stock: '6',
     category: 'living',
-    description: 'Apoya libros de metal en color rojo',
+    description: 'Apoya libros de metal en varios colores',
         img:'https://acdn.mitiendanube.com/stores/630/807/products/01741-35860bf93bc08e9c1d16949768224354-1024-1024.webp'
     }
 
