@@ -1,10 +1,13 @@
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useState, useEffect } from "react"
 import { myProductsById } from "../../asyncmock"
+import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState (null)
     const [loading, setLoading] = useState(true)
+
+    const { itemId } = useParams()
 
     useEffect (()=>{
         myProductsById (itemId)
@@ -29,7 +32,7 @@ if(!product) {
 
 return(
     <section>
-         <h1>+ info</h1>
+         <h3>+ info</h3>
             <ItemDetail {...product}/>
     </section>
 )

@@ -9,7 +9,7 @@ const NavBar = () => {
             <nav>
                 <NavLink to='/' className={classes.title}>Casa Franca</NavLink>
                 
-                <section>  
+                <section className={classes.nav}>  
                     <NavLink to='/category/cocina' className={({isActive})=> isActive ? classes.active : classes.boton}>Cocina</NavLink>     
                     <NavLink to='/category/living' className={({isActive})=> isActive ? classes.active : classes.boton}>Living</NavLink>     
                     <NavLink to='/category/baño' className={({isActive})=> isActive ? classes.active : classes.boton}>Baño</NavLink>     
@@ -22,8 +22,9 @@ const NavBar = () => {
                     <button className={classes.boton}>En cerámica</button>
                     <button className={classes.boton + " " + classes.sale}>SALE</button> */}
                 </section>
+                <CartWidget />
             </nav>
-            <CartWidget />
+           
         </>
     )
 }
