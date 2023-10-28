@@ -18,7 +18,7 @@ const Item = ({ id, title, img, price, stock }) => {
             <h2 className={classes.articulo}>{title}</h2>
             <img src={img} style={{ width:150}}/>
             <h3 className={classes.stock}>Productos en stock: <strong>{stock}</strong></h3>
-            <h4 className="precio">{price}$UYU</h4>
+            <h4 className="precio">{price} $UYU</h4>
            
             {/* otra forma de hacerlo: <button onClick={() => navigate('/item/:itemId')} className={classes.info}>+ info</button> */}
             <Link to={`/item/${id}`}>+ info</Link>
