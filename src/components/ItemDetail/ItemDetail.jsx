@@ -61,7 +61,7 @@ const ItemDetail = ({ id, title, category, img, price, stock, description }) => 
     const ItemCount = inputType === 'button' ? ButtonCount : InputCount
 
     const handleOnAdd = (quantity) => {
-        console.log(`Se agregó ${quantity} ${title} de la categoria {category}`)
+        console.log(`Se agregó ${quantity} ${title} de la categoria ${category}`)
     }
 
     return (
