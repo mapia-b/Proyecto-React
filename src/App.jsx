@@ -4,15 +4,18 @@ import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom'
+import { createContext } from 'react'
+
+export const CartContext = createContext()
 
 function App() {
-  const [count, setCount] = useState(0);
-  const { category } = useParams ();
+
+  const [cart, setCart] = useState ([]);
  
   return (
     <>
       <div>
-       <img />
+      <CartContext.Provider value= {{cart, setCart}}>
         <BrowserRouter>
         <NavBar />
             <Routes>
@@ -21,6 +24,7 @@ function App() {
             <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
           </Routes>
         </BrowserRouter>
+      </CartContext.Provider>
       </div>
      
     </>
