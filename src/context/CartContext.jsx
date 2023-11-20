@@ -14,21 +14,40 @@ export const CartContext = createContext({
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
     console.log(cart)
+
+       //si el producto que quiero agregar ya esta agregado
+       const inCart = (id) => {
+        return cart.some(prod => prod.id === id)
+      }
   
     //agregar producto al carrito
+    // const addItem = (productToAdd) => {
+    //   if(!inCart(productToAdd.id)) {
+    //     setCart(prev => [...prev, productToAdd])
+    //   } else {
+    //     console.log('OK! Ya esta agregado el producto')
+    //   }
+    // }
     const addItem = (productToAdd) => {
-      if(!inCart(productToAdd.id)) {
-        setCart(prev => [...prev, productToAdd])
-      } else {
-        console.log('OK! Ya esta agregado el producto')
-      }
-    }
+        setCart((prevCart) => {
+          const existingItem = prevCart.find((item) => item.id === productToAdd.id);
+    
+          if (existingItem) {
+            // Si el producto ya existe en el carrito, actualiza su cantidad
+            return prevCart.map((item) =>
+              item.id === productToAdd.id
+                ? { ...item, quantity: item.quantity + 1 }
+                : item
+            );
+          } else {
+            // Si el producto no existe en el carrito, agrégalo con cantidad 1
+            return [...prevCart, { ...productToAdd, quantity: 1 }];
+            
+          }
+        });
+      };
+    
   
-    //si el producto que quiero agregar ya esta agregado
-    const inCart = (id) => {
-      return cart.some(prod => prod.id === id)
-    }
-
     //borrar un producto
     const removeItem = (id) => {
         const cartUpdated = cart.filter(prod => prod.id !== id)
@@ -45,7 +64,7 @@ export const CartProvider = ({ children }) => {
         let totalQuantity = 0
 
         cart.forEach(prod => {
-            totalQuantity += prod.quantity
+            totalQuantity += prod.quantity || 0
         })
 
         return totalQuantity
@@ -58,7 +77,7 @@ export const CartProvider = ({ children }) => {
         let total = 0
 
         cart.forEach(prod => {
-            total += prod.price * prod.quantity
+            total += (prod.price ||0) * (prod.quantity ||0)
         })
 
         return total

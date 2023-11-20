@@ -71,7 +71,7 @@ const ItemDetail = ({ id, title, category, img, price, stock, description }) => 
             id, title, price
         }
 
-        addItem (item, quantity)
+        addItem (item)
     }
 
     return (
