@@ -1,7 +1,8 @@
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useState, useEffect } from "react"
-import { myProductsById } from "../../asyncmock"
+// import { myProductsById } from "../../asyncmock"
 import { useParams } from "react-router-dom"
+import { myProductsById } from "../../services/firebase/firestore/products"
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState (null)
