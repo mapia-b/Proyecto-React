@@ -40,3 +40,12 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 10px;
  
 }
+
+.goToCart {
+   color: rgb(216, 11, 206);
+   font-size: larger;
+ 
+   &:hover {
+   color: black;
+   }
+}
