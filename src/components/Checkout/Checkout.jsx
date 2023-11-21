@@ -16,10 +16,10 @@ const Checkout = () => {
             setLoading(true)
 
             const objOrder = {
-                buyer: {
-                    name: 'María Pía Barreiro',
-                    email: 'mpb@gmail.com',
-                    phone: '099123456'
+                buyer: { userData
+                    // name: 'María Pía Barreiro',
+                    // email: 'mpb@gmail.com',
+                    // phone: '099123456'
                 },
                 items: cart,
                 total: total, 
@@ -88,7 +88,6 @@ const Checkout = () => {
         <>
             <h3>Completá el formulario para registrar tu compra</h3>
             <CheckoutForm/>
-            <button onClick={createOrder} className={classes.orden}>Crear orden</button> 
         </>
     )
 }

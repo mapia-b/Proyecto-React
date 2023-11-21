@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
+import classes from './Cart.module.css'
 
 const Cart = () => {
     const { cart, clearCart, totalQuantity, total } = useCart();
 
     return (
-        <div>
+        <div className={classes.container}>
             <h3>Este es tu carrito de compras:</h3>
-            <div>
+            <div className={classes.cart}>
                 {cart.map(prod => (
-                    <div key={prod.id}>
+                    <div key={prod.id} className={classes.prod}>
                         <h3>{prod.name}</h3>
                         <img src={prod.img} alt={prod.title} style={{ width: 100 }} />
                         <p>Precio: ${prod.price}</p>

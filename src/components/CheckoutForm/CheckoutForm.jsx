@@ -4,7 +4,7 @@
 import classes from './CheckoutForm.module.css'
 import { useForm } from "react-hook-form";
 
-const CheckoutForm = () => {
+const CheckoutForm = (createOrder) => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data => console.log(data);
 
@@ -34,6 +34,8 @@ const CheckoutForm = () => {
         <input type="email" defaultValue="@" {...register("example")} />
       </div>
       
+      <button onSubmit={createOrder} className={classes.orden}>Crear orden</button> 
+
       {/* <input type="submit" /> */}
     </form>
     </section>
