@@ -1,9 +1,9 @@
 import classes from './ItemListContainer.module.css'
 import ItemList from '../ItemList/ItemList'
 import useAsync from '../hooks/useAsync'
-
-import { myProducts, myProductsByCategory } from '../../asyncmock'
+// import { myProducts, myProductsByCategory } from '../../asyncmock'
 import { useParams } from 'react-router-dom'
+import { myProducts } from '../../services/firebase/firestore/products'
 
 
 const ItemListContainer =({greeting}) => {
@@ -13,7 +13,7 @@ const ItemListContainer =({greeting}) => {
     
     //customHookFunction definida en mi hook
     //si se obtiene el valor de categoryId entonces se llama a la funcion myProductsByCategroy, sino se llama a la funcion myProducts
-    const customHookFunction = () => categoryId ? myProductsByCategory(categoryId) : myProducts()
+    const customHookFunction = () => myProducts(categoryId) //categoryId ? myProductsByCategory(categoryId) : myProducts()
     
     const { data: products, loading, error } = useAsync(customHookFunction, [categoryId])
 

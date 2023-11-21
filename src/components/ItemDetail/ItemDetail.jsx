@@ -1,6 +1,8 @@
 import ItemCount from "../ItemCount/ItemCount"
 import { useState } from "react"
 import classes from './ItemDetail.module.css'
+import { Link } from "react-router-dom"
+import { useCart } from "../../context/CartContext"
 
 
 /* CODIGO VISTO EN CLASE, REGISTRADO PARA TENERLO ACCESIBLE PARA PRACTICAR: 
@@ -30,9 +32,7 @@ const ButtonCount = ({ onAdd, stock, initial = 1 }) => {
         if (count < stock) {
             setCount(prev => prev + 1)
         }
-
     }
-
     const rest = () => {
         //validacion: no tener valores menores a 1
         if (count >= 1) {
@@ -57,11 +57,21 @@ const ButtonCount = ({ onAdd, stock, initial = 1 }) => {
 
 const ItemDetail = ({ id, title, category, img, price, stock, description }) => {
     const [inputType, setInputType] = useState('button')
+    const [quantityAdded, setQuantityAdded] = useState(0)
 
     const ItemCount = inputType === 'button' ? ButtonCount : InputCount
 
+    const { addItem, inCart } = useCart()
+
     const handleOnAdd = (quantity) => {
+        setQuantityAdded(quantity)
         console.log(`Se agregó ${quantity} ${title} de la categoria ${category}`)
+
+        const item = {
+            id, title, price
+        }
+
+        addItem (item)
     }
 
     return (
@@ -78,9 +88,14 @@ const ItemDetail = ({ id, title, category, img, price, stock, description }) => 
                 <p className={classes.price}>{price} $UYU </p>
                 <p className={classes.id}>Identificador del producto: {id}</p>
             </section>
-            <footer>
+            <footer >
+                { quantityAdded >0 ? (
+                   <Link to='/cart' className={classes.btn + " " + classes.goToCart} > Ir al carrito </Link>
+                ) :(
                 <ItemCount stock={stock} onAdd={handleOnAdd} />
-            </footer>
+                )
+                }
+                </footer>
         </article>
     )
 }
