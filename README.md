@@ -1,9 +1,12 @@
 # Ecommerce Casa Franca 
 ### Proyecto React comisión 58160 
+#### María Pía Barreiro 
+
+![Logo ecommerce](assets/logo.svg)
 
 ## Descripción 
 Proyecto de ecommerse desarrollado con React realizado en el marco de curso de desarrollo drontend React JS, Coderhouse - Noviembre 2023.
-Proyecto realizado sin fines de lucro. Repositorio público GitHub.
+Proyecto realizado sin fines de lucro. Repositorio de GitHub público.
 
 ## Tabla de Contenidos
 - [Instalación](#instalación)
@@ -20,7 +23,7 @@ Sigue estos pasos para instalar y configurar el proyecto en tu máquina local:
 5. Accede a la Aplicación ~npm run dev
 6. ¡Ahora puedes observar y navegar la aplicación localmente!
 
-### Catacterísticas 
+### Características 
 1. Interfaz de Usuario Intuitiva:
 Una interfaz de usuario fácil de usar y comprender para mejorar la experiencia del usuario.
 
