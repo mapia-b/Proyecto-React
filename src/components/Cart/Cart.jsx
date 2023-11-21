@@ -18,10 +18,10 @@ const Cart = () => {
                     </div>
                 ))}
             </div>
-            <h4>Cuantos productos tengo? {totalQuantity}</h4>
-            <h4>precio TOTAL: ${total}</h4>
+            <h4>Productos en carrito: {totalQuantity}</h4>
+            <h4>Total: ${total}</h4>
             <button onClick={() => clearCart()}>Vaciar carrito</button>
-            <Link to='/checkout'>Checkout</Link>
+            <Link to='/checkout' style={{ fontSize: 'larger', marginTop: '20px' }}>Checkout</Link>
         </div>
     );
 };

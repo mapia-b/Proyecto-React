@@ -11,7 +11,7 @@ const CartWidget = () => {
    
     return (
         <div>
-            <Link to='/cart'  style={{ backgroundColor: 'rgba(116, 41, 228, 0.253)' }}>
+            <Link to='/cart'>
                 <img src={cart} style={{ width: 30, height: 30 }} alt="carrito de compras" />
                 {totalQuantity}
               
