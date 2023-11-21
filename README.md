@@ -2,7 +2,6 @@
 ### Proyecto React comisión 58160 
 #### María Pía Barreiro 
 
-![Logo ecommerce](assets/logo.svg)
 
 ## Descripción 
 Proyecto de ecommerse desarrollado con React realizado en el marco de curso de desarrollo drontend React JS, Coderhouse - Noviembre 2023.
