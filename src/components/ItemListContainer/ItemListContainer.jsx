@@ -13,7 +13,7 @@ const ItemListContainer =({greeting}) => {
     
     //customHookFunction definida en mi hook
     //si se obtiene el valor de categoryId entonces se llama a la funcion myProductsByCategroy, sino se llama a la funcion myProducts
-    const customHookFunction = () => myProducts() //categoryId ? myProductsByCategory(categoryId) : myProducts()
+    const customHookFunction = () => myProducts(categoryId) //categoryId ? myProductsByCategory(categoryId) : myProducts()
     
     const { data: products, loading, error } = useAsync(customHookFunction, [categoryId])
 

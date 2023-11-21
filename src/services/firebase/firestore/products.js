@@ -6,10 +6,13 @@ import { database } from "../firebaseConfig"
 import { getDocs, collection, query, where, getDoc, doc, QuerySnapshot } from "firebase/firestore"
 
 //funcion para obtener todos mis productos
-export const myProducts = () => {
+export const myProducts = (categoryId) => {
         return new Promise((resolve, reject) => {
             //referencia a los productos con la funcion collection que va a estar en mi db y paso el nombre que le puse a la coleccion
-            const prodsRef = collection (database, 'products')
+           //si tengo categoryId hago una consulta filtrada, sino busco todos los productos
+            const prodsRef = categoryId
+            ? query (collection (database, 'products'), where ('category', '==', categoryId))
+            :collection (database, 'products')
 
         //la idea es: creo la referencia a mi db y se la paso a la funcion que lee los documentos 
         getDocs(prodsRef)
